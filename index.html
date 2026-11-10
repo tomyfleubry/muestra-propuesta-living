@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="es-AR" data-type="service" data-radius="sharp" data-buttons="solid">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Living industrial · Propuesta de interiorismo de Nexvia IA</title>
+  <meta name="description" content="Muestra del kit de interiorismo de Nexvia IA, con un antes y después, maqueta 3D, plano ilustrativo, muebles de ejemplo y recorrido.">
+  <meta name="theme-color" content="#F7F3EE">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
+  <link rel="canonical" href="https://tomyfleubry.github.io/muestra-propuesta-living/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Living industrial · Nexvia IA">
+  <meta property="og:description" content="Una muestra de interiorismo con imágenes, maqueta, plano, lista de muebles y recorrido.">
+  <meta property="og:url" content="https://tomyfleubry.github.io/muestra-propuesta-living/">
+  <meta property="og:image" content="https://tomyfleubry.github.io/muestra-propuesta-living/assets/living-industrial-frente.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23232120'/%3E%3Cpath d='M9 7h2l10 13V7h2v18h-2L11 12v13H9z' fill='%23F7F3EE'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --paper:#f7f3ee; --ink:#232120; --leather:#8a5a3b; --metal:#1e1e1e; --sofa:#6e6e6e;
+      --sand:#ede5db; --canvas:#e5dbcf; --line:#d6cec5; --wa:#25d366;
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
+      --s7:48px; --s8:64px; --s9:96px; --s10:128px;
+      --edge:clamp(20px,5vw,72px); --nav:60px; --r:8px; --r-button:5px;
+      --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,sans-serif;
+    }
+    *,*::before,*::after { box-sizing:border-box; }
+    html { margin:0; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:400 1rem/1.55 var(--sans); }
+    img,svg { display:block; max-width:100%; }
+    img { height:auto; }
+    a { color:inherit; }
+    button,input { font:inherit; }
+    a,button,input { -webkit-tap-highlight-color:transparent; }
+    :focus-visible { outline:3px solid var(--leather); outline-offset:4px; }
+    main[id],section[id] { scroll-margin-top:calc(var(--nav) + var(--s4)); }
+    h1,h2,p,figure { margin:0; }
+    h1,h2 { font-family:var(--serif); font-weight:400; letter-spacing:-.05em; text-wrap:balance; }
+    h2 { font-size:clamp(2.125rem,5.15vw,4rem); line-height:1.04; }
+    .wrap { width:min(1280px,calc(100% - 2 * var(--edge))); margin-inline:auto; }
+    .defs { position:absolute; width:0; height:0; overflow:hidden; pointer-events:none; }
+    .skip-link { position:absolute; z-index:11; top:8px; left:0; padding:10px 16px; background:var(--paper); transform:translateY(-150%); }
+    .skip-link:focus { transform:none; }
+    .nav {
+      position:fixed; inset:0 0 auto; z-index:10; background:var(--paper);
+      border-bottom:1px solid var(--line);
+    }
+    .nav .wrap { position:relative; display:flex; align-items:center; justify-content:space-between; gap:var(--s3); min-height:var(--nav); }
+    .wordmark { text-decoration:none; font:500 clamp(1.05rem,3.8vw,1.45rem)/1.05 var(--serif); letter-spacing:-.04em; }
+    .nav a { min-height:44px; display:inline-flex; align-items:center; }
+    .nav nav { display:flex; align-items:center; gap:clamp(12px,3vw,40px); }
+    .nav nav a { font-size:.87rem; font-weight:500; text-decoration:none; white-space:nowrap; }
+    .nav nav a:hover,.footer a:hover { text-decoration:underline; text-underline-offset:.28em; }
+    .nav-detail { display:none !important; }
+    .btn {
+      min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:var(--s2);
+      border:1px solid transparent; border-radius:var(--r-button); padding:10px 18px;
+      font-size:.94rem; font-weight:600; line-height:1.3; text-align:center; text-decoration:none;
+      cursor:pointer; transition:transform .16s ease,background-color .16s ease,border-color .16s ease;
+    }
+    .btn:hover { transform:translateY(-2px); }
+    .btn:active { transform:translateY(1px); }
+    .btn--primary { background:var(--leather); color:#fff; }
+    .btn--primary:hover { background:#74482f; }
+    .btn--secondary { border-color:var(--line); background:var(--paper); color:var(--ink); }
+    .btn--secondary:hover { border-color:var(--leather); }
+    .btn--dark { color:#fff; background:var(--metal); }
+    .btn--dark:hover { background:#393431; }
+    .btn svg,.footer-contact svg { width:19px; height:19px; flex:none; }
+    .hero { min-height:100svh; position:relative; isolation:isolate; display:grid; align-items:end; color:#fff; padding-top:calc(var(--nav) + var(--s6)); padding-bottom:var(--s7); background:var(--ink); }
+    .hero-photo,.hero::after { position:absolute; inset:0; width:100%; height:100%; z-index:0; }
+    .hero .wrap { position:relative; z-index:1; }
+    .hero-photo { object-fit:cover; object-position:57% 52%; }
+    .hero::after { content:""; background:linear-gradient(0deg,rgba(25,22,20,.97) 0%,rgba(28,25,23,.83) 29%,rgba(35,33,32,.23) 67%,rgba(35,33,32,.05) 100%); }
+    .hero-text { max-width:760px; }
+    .hero .kicker { color:#fff; }
+    .kicker { font-size:.81rem; font-weight:600; letter-spacing:.055em; color:var(--leather); }
+    .hero h1 { margin:var(--s3) 0 var(--s4); font-size:clamp(3.15rem,8.4vw,7rem); line-height:.97; text-wrap:initial; max-width:9.6ch; }
+    .hero__lead { font-size:clamp(1rem,1.5vw,1.2rem); max-width:41ch; }
+    .btn-row { display:flex; flex-wrap:wrap; gap:var(--s3); margin-top:var(--s5); }
+    .hero .btn { width:100%; max-width:370px; }
+    .hero .btn--primary { white-space:nowrap; }
+    .hero .btn--secondary { background:#23212040; border-color:#fff; color:#fff; }
+    .hero .btn--secondary:hover { background:#232120aa; }
+    .hero :focus-visible,.footer :focus-visible { outline-color:#fff; }
+    .sample { max-width:calc(100% - 52px); margin-top:var(--s5); font-size:.82rem; font-weight:500; color:#fff; }
+    .section { padding-block:clamp(64px,9vw,128px); }
+    .section-head { margin-bottom:var(--s6); }
+    .section-head .kicker,.split-copy .kicker { margin-bottom:var(--s3); }
+    .section-head p:not(.kicker),.split-copy > p:not(.kicker) { margin-top:var(--s4); max-width:54ch; }
+    .note { color:#625b54; font-size:.91rem; }
+    .split { display:grid; gap:var(--s6); align-items:start; }
+    .split-copy { min-width:0; }
+    .paper-band { background:var(--sand); }
+    .frame { overflow:hidden; border-radius:var(--r); background:var(--canvas); }
+    .compare-stage {
+      --split:50%; position:relative; isolation:isolate; aspect-ratio:3/2;
+      user-select:none; -webkit-user-select:none; touch-action:pan-y;
+    }
+    .compare-stage img { position:absolute; width:100%; height:100%; object-fit:cover; inset:0; }
+    .compare-stage .before { clip-path:inset(0 calc(100% - var(--split)) 0 0); }
+    .compare-label { position:absolute; top:var(--s3); padding:5px 9px; color:#fff; background:#232120e8; font-size:.82rem; border-radius:var(--r-button); }
+    .compare-label--before { left:var(--s3); }
+    .compare-label--after { right:var(--s3); }
+    .compare-divider { position:absolute; inset:0 auto 0 var(--split); width:2px; background:#fff; transform:translateX(-50%); pointer-events:none; }
+    .compare-grip {
+      display:grid; place-items:center; position:absolute; top:50%; left:50%; width:46px; height:46px;
+      transform:translate(-50%,-50%); border:1px solid #fff; border-radius:50%;
+      background:var(--ink); color:#fff; box-shadow:0 2px 10px #23212038;
+    }
+    .compare-grip svg { width:24px; }
+    .compare-range { appearance:none; position:absolute; inset:0; margin:0; width:100%; height:100%; border:0; background:transparent; cursor:ew-resize; touch-action:pan-y; }
+    .compare-range::-webkit-slider-thumb { appearance:none; width:1px; height:1px; background:transparent; }
+    .compare-range::-moz-range-thumb { width:1px; height:1px; border:0; background:transparent; }
+    .compare-range:focus-visible { outline-offset:-4px; border-radius:var(--r); }
+    .compare-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:var(--s2) var(--s5); margin-top:var(--s3); }
+    .compare-meta output { font-variant-numeric:tabular-nums; }
+    .gallery { display:grid; gap:var(--s5); grid-template-columns:minmax(0,1fr); }
+    .gallery figure { min-width:0; }
+    .gallery img { width:100%; aspect-ratio:3/2; object-fit:cover; transition:transform .3s ease; }
+    .gallery figure:hover img { transform:scale(1.025); }
+    .gallery figcaption { display:flex; align-items:baseline; gap:var(--s3); margin-top:var(--s3); font-size:.94rem; font-weight:500; }
+    .view-index { font-size:.79rem; font-variant-numeric:tabular-nums; color:var(--leather); }
+    .model { min-height:280px; height:clamp(280px,55vw,560px); position:relative; }
+    .model canvas,.model-poster { position:absolute; width:100%; height:100%; inset:0; }
+    .model canvas { display:block; cursor:grab; }
+    .model canvas:active { cursor:grabbing; }
+    .model[data-ready="true"] .model-poster { visibility:hidden; }
+    .camera-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s2); margin-top:var(--s4); }
+    .camera-row .btn { min-width:0; padding-inline:6px; font-size:clamp(.78rem,2.8vw,.94rem); }
+    .camera-row .btn[aria-pressed="true"] { background:var(--leather); border-color:var(--leather); color:#fff; }
+    .model-status { margin-top:var(--s3); }
+    .plan-card { padding:clamp(12px,3vw,36px); background:#f4eee6; }
+    .plan-card svg { width:100%; height:auto; }
+    .plan-legend { margin:var(--s4) 0 0; padding:0; list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:var(--s2) var(--s4); }
+    .plan-legend li { display:flex; gap:var(--s2); align-items:center; font-size:.88rem; }
+    .swatch { width:12px; height:12px; border:1px solid #2321203d; border-radius:2px; flex:none; background:var(--swatch); }
+    .budget { width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; }
+    .budget th,.budget td { padding:var(--s4) 0; text-align:left; border-bottom:1px solid var(--line); }
+    .budget th { font-weight:500; }
+    .budget thead th { color:#625b54; font-size:.82rem; }
+    .budget td:last-child,.budget thead th:last-child { text-align:right; white-space:nowrap; padding-left:var(--s3); }
+    .budget tfoot :is(th,td) { font-weight:600; color:var(--leather); border-bottom:0; font-size:1.1rem; }
+    .tour-card { display:grid; overflow:hidden; border-radius:var(--r); color:#fff; background:var(--ink); }
+    .tour-copy { padding:clamp(24px,4vw,64px); align-self:center; }
+    .tour-copy p { margin-block:var(--s4) var(--s5); max-width:39ch; }
+    .tour-card img { width:100%; height:100%; min-height:220px; aspect-ratio:3/2; object-fit:cover; }
+    .tour-card .btn { text-align:left; }
+    .kit-list {
+      margin:var(--s6) 0 var(--s7); padding:0; list-style:none; display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s4);
+    }
+    .kit-list li { min-width:0; padding-block:var(--s4); border-top:1px solid #bcb0a4; }
+    .kit-list span { display:block; color:var(--leather); font-size:.82rem; margin-bottom:var(--s2); }
+    .kit-list strong { font:400 clamp(1.12rem,2.25vw,1.7rem)/1.25 var(--serif); letter-spacing:-.02em; }
+    .kit-intro { margin-top:var(--s4); max-width:61ch; }
+    .footer { padding-block:var(--s7) calc(var(--s8) + env(safe-area-inset-bottom)); background:var(--ink); color:var(--paper); }
+    .footer .wrap { display:grid; gap:var(--s4); padding-right:48px; }
+    .footer p { color:#ddd2c8; font-size:.88rem; max-width:66ch; }
+    .footer-contact { min-height:44px; display:inline-flex; align-items:center; gap:var(--s2); justify-self:start; text-decoration:none; }
+    .wa-float {
+      position:fixed; z-index:9; right:max(var(--s4),env(safe-area-inset-right));
+      bottom:max(var(--s4),env(safe-area-inset-bottom)); display:grid; place-items:center;
+      width:58px; height:58px; background:var(--wa); border-radius:50%; color:#fff;
+      box-shadow:0 4px 18px #23212032; transition:transform .18s ease;
+    }
+    .wa-float svg { width:28px; height:28px; }
+    .wa-float:hover { transform:translateY(-2px); }
+    .wa-float:active { transform:translateY(1px); }
+    .sr-only { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+    @media (min-width:640px) {
+      :root { --nav:68px; }
+      .hero .btn { width:auto; }
+      .hero { padding-bottom:var(--s8); }
+      .nav-detail { display:inline-flex !important; }
+      .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .gallery figure:first-child { grid-column:1/-1; }
+      .gallery figure:first-child img { aspect-ratio:2.15; object-position:center 58%; }
+      .kit-list { grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--s5); }
+    }
+    @media (min-width:960px) {
+      .split { grid-template-columns:minmax(0,calc((100% + 24px) * 5 / 12 - 24px)) minmax(0,1fr); gap:var(--s5); }
+      .gallery { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .gallery figure:first-child { grid-column:auto; }
+      .gallery figure:first-child img { aspect-ratio:3/2; }
+      .tour-card { grid-template-columns:minmax(0,4fr) minmax(0,5fr); }
+      .hero::after { background:linear-gradient(0deg,#1b1715ed 0%,#2321205c 62%,#23212004 100%),linear-gradient(90deg,#23212070,transparent 68%); }
+      .hero-photo { object-position:50% 55%; }
+      .footer .wrap { grid-template-columns:minmax(0,1fr) auto; align-items:start; padding-right:0; }
+      .footer-contact { grid-column:2; grid-row:1/3; }
+    }
+    @media (max-width:359px) {
+      .nav .wrap { gap:var(--s2); }
+      .nav .wordmark { font-size:1rem; }
+      .nav nav { gap:var(--s2); }
+      .nav nav a { font-size:.76rem; }
+      .hero h1 { font-size:2.8rem; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; animation:none!important; }
+      .btn:hover,.wa-float:hover,.gallery figure:hover img { transform:none; }
+    }
+  </style>
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.3.15/dist/lenis.min.js"></script>
+</head>
+<body>
+  <!-- Servicio · hero foto a sangre · marfil, grafito y cuero · Fraunces / Inter · comparador y órbita -->
+  <svg class="defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </svg>
+  <header class="nav">
+    <div class="wrap">
+      <a class="skip-link" href="#contenido">Ir al contenido</a>
+      <a class="wordmark" href="#contenido">Living industrial</a>
+      <nav aria-label="Secciones de la propuesta">
+        <a href="#comparador">Antes y después</a>
+        <a class="nav-detail" href="#vistas">Vistas</a>
+        <a href="#maqueta">Maqueta</a>
+        <a class="nav-detail" href="#muebles">Muebles</a>
+        <a class="nav-detail" href="#recorrido">Recorrido</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero hero--photo" aria-labelledby="hero-title" data-enter>
+      <img class="hero-photo" src="assets/living-industrial-frente.webp" alt="Living industrial con sofá gris, sillón de cuero marrón y un gran ventanal de marcos negros" fetchpriority="high" data-source="adjunta" data-subject="living amueblado">
+      <div class="wrap">
+        <div class="hero-text">
+          <p class="kicker">Propuesta de interiorismo · Muestra</p>
+          <h1 id="hero-title">Así quedaría tu living.</h1>
+          <p class="hero__lead">Del living vacío a la propuesta completa: imágenes, maqueta 3D y recorrido, en una sola página.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="https://marble.worldlabs.ai/world/becdc655-9571-405c-936c-5a52a2aeff8f" target="_blank" rel="noopener noreferrer">Recorrer el ambiente <svg aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (abre en otra pestaña)</span></a>
+            <a class="btn btn--secondary" href="#comparador">Ver el antes y el después</a>
+          </div>
+          <p class="sample">Página de muestra — imágenes y datos de ejemplo</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comparador" aria-labelledby="compare-title">
+      <div class="wrap split">
+        <div class="split-copy">
+          <p class="kicker">01 / Comparador</p>
+          <h2 id="compare-title">Antes y después</h2>
+          <p><label for="compare-range">Arrastrá para ver el cambio</label></p>
+          <p class="note" id="compare-note">La vista del living vacío es una recreación de ejemplo.</p>
+        </div>
+        <div>
+          <div class="compare-stage frame">
+            <img src="assets/living-industrial-frente.webp" alt="Después: living amueblado con sofá gris, sillón de cuero y alfombra geométrica" width="498" height="332" loading="lazy" data-source="adjunta" data-subject="living amueblado">
+            <img class="before" src="assets/living-vacio-recreacion.webp" alt="Antes recreado: living vacío con piso de madera clara, paredes blancas y ventanal de marcos negros" width="1536" height="1024" loading="lazy" data-source="recreación" data-subject="living vacío">
+            <span class="compare-label compare-label--before" aria-hidden="true">Antes</span>
+            <span class="compare-label compare-label--after" aria-hidden="true">Después</span>
+            <span class="compare-divider" aria-hidden="true"><span class="compare-grip">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4m8-8 4 4-4 4"/></svg>
+            </span></span>
+            <input class="compare-range" id="compare-range" type="range" min="0" max="100" value="50" aria-describedby="compare-note" aria-valuetext="50 por ciento de la vista anterior">
+          </div>
+          <div class="compare-meta note"><span>Podés usar las flechas del teclado.</span><output for="compare-range" aria-hidden="true">50 % antes</output></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paper-band" id="vistas" aria-labelledby="views-title">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">02 / Galería</p>
+          <h2 id="views-title">Las vistas del ambiente</h2>
+        </div>
+        <div class="gallery">
+          <figure>
+            <div class="frame"><img src="assets/living-industrial-frente.webp" alt="Vista amplia desde el acceso hacia el ventanal, con el sofá gris sobre la pared derecha" width="498" height="332" loading="lazy" data-source="adjunta" data-subject="vista frontal"></div>
+            <figcaption><span class="view-index" aria-hidden="true">01</span>Vista hacia el ventanal</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/living-industrial-reversa.webp" alt="Vista del sofá, la mesa ratona y el sillón marrón entre los marcos del ventanal" width="498" height="332" loading="lazy" data-source="adjunta" data-subject="vista reversa"></div>
+            <figcaption><span class="view-index" aria-hidden="true">02</span>Vista desde el ventanal</figcaption>
+          </figure>
+          <figure>
+            <div class="frame"><img src="assets/living-industrial-lateral.webp" alt="Vista lateral desde el respaldo del sofá hacia la mesa ratona y el ventanal" width="498" height="332" loading="lazy" data-source="adjunta" data-subject="vista lateral"></div>
+            <figcaption><span class="view-index" aria-hidden="true">03</span>Vista lateral</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="maqueta" aria-labelledby="model-title">
+      <div class="wrap split">
+        <div class="split-copy">
+          <p class="kicker">03 / Distribución</p>
+          <h2 id="model-title">Maqueta 3D</h2>
+          <p>Arrastrá para girar la maqueta o elegí una de las tres vistas.</p>
+          <p class="note">Maqueta esquemática para visualizar la idea — no es un modelo a escala ni documentación de obra.</p>
+        </div>
+        <div>
+          <div class="model frame" data-lenis-prevent data-visual>
+            <svg class="model-poster" viewBox="0 0 620 390" role="img" aria-label="Vista esquemática de la maqueta del living, con el ventanal al fondo">
+              <rect width="620" height="390" fill="#e5dbcf"/>
+              <path d="M88 260 344 338 537 219 279 143Z" fill="#d0ab86" stroke="#8e7260" stroke-width="2"/>
+              <path d="m88 260 256 78v9L88 268Zm256 78 193-119v9L344 347Z" fill="#a9856a"/>
+              <path d="M88 260V133l191-110v120z" fill="#f4efe8" stroke="#b9aea2" stroke-width="2"/>
+              <path d="M279 143V23l258 75v121z" fill="#f7f3ee" stroke="#b9aea2" stroke-width="2"/>
+              <path d="M102 245V148l160-92v97z" fill="#c3d1d3" stroke="#262626" stroke-width="5"/>
+              <path d="M133 227v-97m32 80v-99m32 80V94m33 80V75M102 185 262 92m-160 125 160-93" stroke="#262626" stroke-width="3"/>
+              <path d="m203 250 134 40 90-56-133-39z" fill="#6e6e6e"/>
+              <path d="m337 215 99 29 50-31-98-28z" fill="#484746"/>
+              <path d="m337 213 99 29v-26l-99-29z" fill="#626161"/>
+              <path d="m338 187 98 29 50-30-98-29z" fill="#767574"/>
+              <path d="m370 167 116 34v-31l-116-34z" fill="#555454"/>
+              <path d="m172 221 46 14 40-23-46-14z" fill="#8a5a3b"/>
+              <path d="M173 221v20m44-7v20m40-43v19m-85-9v-32l45 14v32" stroke="#1e1e1e" stroke-width="3" fill="#a27455"/>
+              <path d="m254 232 74 21 46-28-73-21z" fill="#946849" stroke="#1e1e1e" stroke-width="3"/>
+              <path d="M254 232v24m74-3v24m46-52v24" stroke="#1e1e1e" stroke-width="3"/>
+              <path d="M326 155v-59m0 59-10 11m10-11 10 11m-10-70h17" stroke="#1e1e1e" stroke-width="3"/>
+              <path d="m339 97 8-12 7 16z" fill="#1e1e1e"/>
+              <path d="m395 75 46 13v39l-46-13z" fill="#cfbfb2" stroke="#1e1e1e" stroke-width="3"/>
+              <path d="m400 83 16 5v26l-16-4zm20 6 16 5v25l-16-4z" fill="#6e6e6e"/>
+            </svg>
+          </div>
+          <div class="camera-row" role="group" aria-label="Vistas fijas de la maqueta">
+            <button class="btn btn--secondary" type="button" data-camera="sofa" aria-pressed="false" disabled>Desde el sofá</button>
+            <button class="btn btn--secondary" type="button" data-camera="puerta" aria-pressed="true" disabled>Desde la puerta</button>
+            <button class="btn btn--secondary" type="button" data-camera="planta" aria-pressed="false" disabled>Planta</button>
+          </div>
+          <p class="model-status note" role="status" hidden></p>
+          <noscript><p class="note">Activá JavaScript para girar la maqueta.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <section class="section paper-band" id="plano" aria-labelledby="plan-title">
+      <div class="wrap split">
+        <div class="split-copy">
+          <p class="kicker">04 / Planta</p>
+          <h2 id="plan-title">Plano esquemático</h2>
+          <p>Esquema ilustrativo, sin medidas reales.</p>
+          <p class="note">Plano y maqueta esquemáticos, sin medidas reales: son para visualizar la idea, no documentación de obra.</p>
+        </div>
+        <div class="plan-card frame">
+          <svg viewBox="0 0 620 460" role="img" aria-labelledby="plan-svg-title plan-svg-desc">
+            <title id="plan-svg-title">Esquema ilustrativo de la distribución</title>
+            <desc id="plan-svg-desc">Ventanal arriba, sofá sobre la pared derecha, sillón a la izquierda y mesa sobre la alfombra al centro. No incluye cotas.</desc>
+            <defs>
+              <pattern id="plan-floor" width="58" height="18" patternUnits="userSpaceOnUse"><rect width="58" height="18" fill="#f1e5d7"/><path d="M0 17.5h58M29 0v17.5" stroke="#e8d9ca" fill="none"/></pattern>
+              <pattern id="plan-rug" width="30" height="30" patternUnits="userSpaceOnUse"><rect width="30" height="30" fill="#d7d1c9"/><path d="M15 2 28 15 15 28 2 15Z" fill="none" stroke="#b6afa7"/></pattern>
+            </defs>
+            <rect x="70" y="70" width="480" height="332" fill="url(#plan-floor)"/>
+            <path d="M176 402H70V70h53m374 0h53v332H254" stroke="#232120" stroke-width="9" fill="none" stroke-linejoin="square"/>
+            <rect x="123" y="63" width="374" height="14" fill="#bccacd" stroke="#232120" stroke-width="3"/>
+            <path d="M172 63v14m55-14v14m55-14v14m55-14v14m55-14v14m55-14v14" stroke="#232120" stroke-width="2"/>
+            <text x="310" y="44" text-anchor="middle" fill="#232120" font-family="Inter, sans-serif" font-size="20">Ventanal</text>
+            <rect x="236" y="151" width="232" height="188" rx="4" fill="url(#plan-rug)" stroke="#8f8880" stroke-width="2"/>
+            <rect x="451" y="150" width="82" height="192" rx="7" fill="#6e6e6e" stroke="#454545" stroke-width="2"/>
+            <rect x="464" y="168" width="50" height="155" rx="4" fill="#84817e"/>
+            <path d="M464 220h50m-50 51h50" stroke="#514e4c" stroke-width="2"/>
+            <g transform="rotate(-25 160 186)"><rect x="122" y="148" width="76" height="76" rx="6" fill="#8a5a3b" stroke="#232120" stroke-width="3"/><path d="M129 164h62" stroke="#593720" stroke-width="3"/></g>
+            <rect x="288" y="204" width="119" height="76" rx="3" fill="#b78661" stroke="#232120" stroke-width="3"/>
+            <path d="m498 104-19 30h38z" fill="none" stroke="#1e1e1e" stroke-width="2"/>
+            <circle cx="498" cy="120" r="10" fill="#232120"/>
+            <text x="214" y="441" text-anchor="middle" fill="#232120" font-family="Inter, sans-serif" font-size="20">Acceso</text>
+          </svg>
+          <ul class="plan-legend" aria-label="Referencias del plano">
+            <li><span class="swatch" style="--swatch:#6e6e6e"></span>Sofá</li>
+            <li><span class="swatch" style="--swatch:#8a5a3b"></span>Sillón</li>
+            <li><span class="swatch" style="--swatch:#b78661"></span>Mesa ratona</li>
+            <li><span class="swatch" style="--swatch:#d7d1c9"></span>Alfombra</li>
+            <li><span class="swatch" style="--swatch:#1e1e1e"></span>Lámpara</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="muebles" aria-labelledby="budget-title">
+      <div class="wrap split">
+        <div class="split-copy">
+          <p class="kicker">05 / Selección</p>
+          <h2 id="budget-title">Lista de muebles</h2>
+          <p id="budget-note" class="note">Precios estimados a modo de ejemplo, no son presupuestos reales. En un proyecto real, la lista lleva los muebles y precios que defina el estudio.</p>
+        </div>
+        <table class="budget" aria-describedby="budget-note">
+          <thead><tr><th scope="col">Pieza</th><th scope="col">Estimado en USD</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Sofá de tela gris de 3 cuerpos</th><td data-assumed data-price="980">980</td></tr>
+            <tr><th scope="row">Sillón de cuero marrón con estructura de metal negro</th><td data-assumed data-price="390">390</td></tr>
+            <tr><th scope="row">Mesa ratona de madera y metal negro</th><td data-assumed data-price="285">285</td></tr>
+            <tr><th scope="row">Alfombra gris con dibujo geométrico</th><td data-assumed data-price="240">240</td></tr>
+            <tr><th scope="row">Lámpara de pie negra con trípode</th><td data-assumed data-price="150">150</td></tr>
+            <tr><th scope="row">Cuadro abstracto enmarcado</th><td data-assumed data-price="95">95</td></tr>
+            <tr><th scope="row">Deco de mesa: bowl, libros y portavela</th><td data-assumed data-price="60">60</td></tr>
+          </tbody>
+          <tfoot><tr><th scope="row">Total estimado</th><td data-total="2200">USD 2.200</td></tr></tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="section paper-band" id="recorrido" aria-labelledby="tour-title">
+      <div class="wrap">
+        <article class="tour-card">
+          <div class="tour-copy">
+            <h2 id="tour-title">El recorrido</h2>
+            <p>El mismo living, caminable: es la tercera pieza del kit, junto con las imágenes y esta página.</p>
+            <a class="btn btn--primary" href="https://marble.worldlabs.ai/world/becdc655-9571-405c-936c-5a52a2aeff8f" target="_blank" rel="noopener noreferrer">Abrir el recorrido — se camina desde el celular <svg aria-hidden="true"><use href="#i-out"/></svg><span class="sr-only"> (abre en otra pestaña)</span></a>
+          </div>
+          <img src="assets/living-industrial-lateral.webp" alt="Vista lateral del living, con el sofá gris en primer plano y la ciudad detrás del ventanal" width="498" height="332" loading="lazy" data-source="adjunta" data-subject="living recorrible">
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="kit" aria-labelledby="kit-title">
+      <div class="wrap">
+        <h2 id="kit-title">Qué incluye el kit</h2>
+        <p class="kit-intro">Fotos y medidas de un ambiente → en 48 horas, la propuesta completa en una sola página, con la marca del estudio.</p>
+        <ol class="kit-list">
+          <li><span aria-hidden="true">01</span><strong>Imágenes del ambiente amueblado</strong></li>
+          <li><span aria-hidden="true">02</span><strong>Página-propuesta como esta</strong></li>
+          <li><span aria-hidden="true">03</span><strong>Ambiente recorrible</strong></li>
+          <li><span aria-hidden="true">04</span><strong>Lista de muebles</strong></li>
+        </ol>
+        <a class="btn btn--dark" href="https://wa.me/13052818389?text=Hola%2C%20quiero%20una%20propuesta%20as%C3%AD%20para%20un%20proyecto" target="_blank" rel="noopener noreferrer"><svg fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>Quiero una propuesta así para un proyecto</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer closing">
+    <div class="wrap">
+      <span class="wordmark">Nexvia IA — muestra de interiorismo</span>
+      <p>Página de muestra con imágenes y datos de ejemplo. No corresponde a un cliente ni a una obra real.</p>
+      <a class="footer-contact" href="https://wa.me/13052818389?text=Hola%2C%20quiero%20una%20propuesta%20as%C3%AD%20para%20un%20proyecto" target="_blank" rel="noopener noreferrer"><svg fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp de Nexvia</a>
+    </div>
+    <a class="wa-float" href="https://wa.me/13052818389?text=Hola%2C%20quiero%20una%20propuesta%20as%C3%AD%20para%20un%20proyecto" aria-label="Escribile a Nexvia por WhatsApp" target="_blank" rel="noopener noreferrer"><svg fill="currentColor" aria-hidden="true"><use href="#i-wa"/></svg></a>
+  </footer>
+
+  <script>
+    const range = document.querySelector('#compare-range');
+    const stage = range.closest('.compare-stage');
+    const percent = document.querySelector('output[for="compare-range"]');
+    function updateComparison() {
+      const value = Number(range.value);
+      stage.style.setProperty('--split', value + '%');
+      range.setAttribute('aria-valuetext', value + ' por ciento de la vista anterior');
+      percent.value = value + ' % antes';
+    }
+    range.addEventListener('input', updateComparison);
+    updateComparison();
+    let comparePointer = null;
+    function moveDivider(event) {
+      const bounds = stage.getBoundingClientRect();
+      range.value = Math.round((event.clientX - bounds.left) / bounds.width * 100);
+      updateComparison();
+    }
+    range.addEventListener('pointerdown', event => {
+      if (!event.isPrimary || event.button !== 0) return;
+      event.preventDefault();
+      range.focus({ preventScroll:true });
+      comparePointer = event.pointerId;
+      range.setPointerCapture(comparePointer);
+      moveDivider(event);
+    });
+    range.addEventListener('pointermove', event => {
+      if (event.pointerId === comparePointer) moveDivider(event);
+    });
+    for (const event of ['pointerup', 'pointercancel', 'lostpointercapture']) {
+      range.addEventListener(event, () => { comparePointer = null; });
+    }
+
+    const total = [...document.querySelectorAll('[data-price]')].reduce((sum, cell) => sum + Number(cell.dataset.price), 0);
+    const totalCell = document.querySelector('[data-total]');
+    totalCell.dataset.total = total;
+    totalCell.textContent = 'USD ' + total.toLocaleString('es-AR', { useGrouping:'always' });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const motion = matchMedia('(prefers-reduced-motion: reduce)');
+      let lenis, ticker, animationScope;
+      function configureMotion() {
+        animationScope?.revert();
+        if (ticker) window.gsap.ticker.remove(ticker);
+        lenis?.destroy();
+        lenis = ticker = animationScope = null;
+        if (motion.matches) return;
+
+        const { gsap, ScrollTrigger, Lenis } = window;
+        if (Lenis) {
+          lenis = new Lenis({ autoRaf:!gsap, smoothWheel:false });
+          if (gsap) {
+            ticker = time => lenis.raf(time * 1000);
+            gsap.ticker.add(ticker);
+          }
+        }
+        if (!gsap || !ScrollTrigger) return;
+        gsap.registerPlugin(ScrollTrigger);
+        lenis?.on('scroll', ScrollTrigger.update);
+        animationScope = gsap.context(() => {
+          gsap.from('.hero-text', { y:14, opacity:.82, duration:.55, ease:'power2.out' });
+          ScrollTrigger.create({
+            trigger:stage,
+            start:'top 82%',
+            once:true,
+            onEnter:() => gsap.fromTo('.compare-grip', { scale:.88 }, { scale:1, duration:.35, ease:'power2.out' })
+          });
+        });
+      }
+      configureMotion();
+      motion.addEventListener('change', configureMotion);
+
+      document.addEventListener('click', event => {
+        const link = event.target.closest('a[href^="#"]');
+        if (!lenis || !link || event.defaultPrevented || event.button !== 0 ||
+            event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        const hash = link.getAttribute('href');
+        const target = document.getElementById(hash.slice(1));
+        if (!target) return;
+        event.preventDefault();
+        if (location.hash !== hash) history.pushState(null,'',hash);
+        const offset = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+        const top = Math.max(0,window.scrollY + target.getBoundingClientRect().top - offset);
+        lenis.scrollTo(top,{duration:.7});
+      });
+    });
+  </script>
+  <script type="module">
+    const mount = document.querySelector('.model');
+    const cameras = [...document.querySelectorAll('[data-camera]')];
+    const status = document.querySelector('.model-status');
+
+    function showModelFallback(message) {
+      mount.querySelector('canvas')?.remove();
+      delete mount.dataset.ready;
+      for (const button of cameras) button.disabled = true;
+      status.textContent = message;
+      status.hidden = false;
+    }
+
+    async function startModel() {
+      try {
+        const [THREE, { OrbitControls }] = await Promise.all([import('three'), import('three/addons/controls/OrbitControls.js')]);
+        const renderer = new THREE.WebGLRenderer({ antialias:true, alpha:false });
+        renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 1.6));
+        renderer.setClearColor('#e5dbcf');
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFShadowMap;
+        let shaderFailed = false;
+        renderer.debug.onShaderError = () => { shaderFailed = true; };
+        const canvas = renderer.domElement;
+        canvas.setAttribute('aria-label','Maqueta esquemática del living. Usá los botones de vista o arrastrá para girarla.');
+        canvas.setAttribute('role','img');
+        mount.append(canvas);
+
+        const scene = new THREE.Scene();
+        scene.add(new THREE.HemisphereLight('#fff7eb', '#867568', 2.45));
+        const light = new THREE.DirectionalLight('#ffecd8', 2.15);
+        light.position.set(-4,8,3);
+        light.castShadow = true;
+        light.shadow.mapSize.set(1024,1024);
+        Object.assign(light.shadow.camera, { left:-7, right:7, top:7, bottom:-7, near:.1, far:28 });
+        light.shadow.normalBias = .025;
+        scene.add(light);
+
+        const material = (color, options={}) => new THREE.MeshStandardMaterial({ color, roughness:.84, ...options });
+        const wood = material('#c59a72'), wall = material('#f0eae2'), metal = material('#242322');
+        const upholstery = material('#565456'), cushion = material('#6e6c6b'), leather = material('#935e3d');
+        const walnut = material('#896144'), rug = material('#797572'), rugLine = material('#bcb2a7');
+        const glass = material('#b4cdd0', { transparent:true, opacity:.52, roughness:.24, depthWrite:false });
+        const neutralGround = material('#e5dbcf'), ivory = material('#e2d9cc'), lampLight = material('#f4deaa');
+        const plankTones = ['#ca9f76','#cfa77e','#c59a72','#d0a47b','#c69b70'].map(color => material(color));
+        const room = new THREE.Group();
+        scene.add(room);
+
+        function mesh(geometry, surface, x, y, z, parent=room, casts=true) {
+          const object = new THREE.Mesh(geometry, surface);
+          object.position.set(x,y,z);
+          object.castShadow = casts;
+          object.receiveShadow = true;
+          parent.add(object);
+          return object;
+        }
+        function box(w,h,d,x,y,z,surface,parent,casts=true) {
+          return mesh(new THREE.BoxGeometry(w,h,d),surface,x,y,z,parent,casts);
+        }
+        function tube(from,to,r,surface,parent) {
+          const a = new THREE.Vector3(...from), b = new THREE.Vector3(...to);
+          const center = a.clone().add(b).multiplyScalar(.5);
+          const rod = mesh(new THREE.CylinderGeometry(r,r,a.distanceTo(b),10),surface,center.x,center.y,center.z,parent);
+          rod.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),b.sub(a).normalize());
+          return rod;
+        }
+        box(80,.04,80,0,-.26,0,neutralGround,scene,false);
+        box(6.18,.22,5.32,0,-.13,0,wood);
+        for (let row=0; row<19; row++) {
+          for (let col=0; col<5; col++) {
+            const x0 = Math.max(-3.03,-3.7+col*1.65+(row%3)*.23);
+            const x1 = Math.min(3.03,-3.7+(col+1)*1.65+(row%3)*.23);
+            if (x1-x0>.03) box(x1-x0-.012,.024,.267,(x0+x1)/2,-.006,-2.53+row*.28,plankTones[(row*3+col*2)%5],room,false);
+          }
+        }
+        const sofaWall = new THREE.Group();
+        room.add(sofaWall);
+        box(.12,2.85,5.28,3.1,1.405,0,wall,sofaWall,false);
+        box(.38,2.85,.13,-2.89,1.405,-2.64,wall,room,false);
+        box(.57,2.85,.13,2.82,1.405,-2.64,wall,room,false);
+        box(5.25,.23,.13,-.18,2.71,-2.64,wall,room,false);
+        box(5.25,.17,.13,-.18,.065,-2.64,wall,room,false);
+        box(.04,.095,5.18,3.02,.045,0,ivory,sofaWall);
+        box(5.25,2.47,.027,-.18,1.37,-2.665,glass,room,false);
+        for (const x of [-2.8,-2.18,-1.53,-.68,.19,.98,1.71,2.44]) box(.05,2.5,.085,x,1.37,-2.64,metal);
+        for (const y of [.13,.77,2.08,2.62]) box(5.29,.05,.085,-.18,y,-2.64,metal);
+
+        box(2.72,.027,2.55,.24,.022,.37,rug);
+        for (const side of [-1,1]) {
+          box(.029,.012,2.43,.24+side*1.27,.043,.37,rugLine,room,false);
+          box(2.53,.012,.029,.24,.043,.37+side*1.19,rugLine,room,false);
+        }
+        for (const x of [-.51,.24,.99]) for (const z of [-.34,.37,1.08]) {
+          const lozenge = box(.38,.008,.38,x,.041,z,rugLine,room,false);
+          lozenge.rotation.y = Math.PI/4;
+          const inset = box(.27,.009,.27,x,.047,z,rug,room,false);
+          inset.rotation.y = Math.PI/4;
+        }
+
+        const sofa = new THREE.Group();
+        sofa.position.set(2.25,0,.47);
+        sofa.rotation.y = -Math.PI/2;
+        room.add(sofa);
+        box(2.52,.28,.88,0,.23,0,upholstery,sofa);
+        box(2.4,.56,.18,0,.59,-.37,upholstery,sofa);
+        for (const x of [-1.16,1.16]) {
+          box(.22,.47,.87,x,.44,.01,upholstery,sofa);
+          for (const z of [-.31,.31]) box(.055,.17,.055,x,.08,z,metal,sofa);
+        }
+        for (const x of [-.69,0,.69]) {
+          box(.665,.14,.63,x,.432,.07,cushion,sofa);
+          const back = box(.67,.37,.16,x,.65,-.24,cushion,sofa);
+          back.rotation.x = -.16;
+        }
+        for (const x of [-.86,.86]) {
+          const pillow = box(.28,.27,.11,x,.61,-.06,upholstery,sofa);
+          pillow.rotation.z = x*.28;
+        }
+
+        const chair = new THREE.Group();
+        chair.position.set(-1.78,0,-.75);
+        chair.rotation.y = .75;
+        room.add(chair);
+        box(.72,.13,.6,0,.43,.04,leather,chair);
+        const chairBack = box(.73,.42,.1,0,.68,-.27,leather,chair);
+        chairBack.rotation.x = -.19;
+        for (const x of [-.38,.38]) {
+          tube([x,.018,.32],[x,.62,.26],.018,metal,chair);
+          tube([x,.62,.26],[x,.62,-.32],.018,metal,chair);
+          tube([x,.018,-.39],[x,.83,-.32],.018,metal,chair);
+          tube([x,.39,.28],[x,.39,-.32],.017,metal,chair);
+        }
+        const table = new THREE.Group();
+        table.position.set(.24,0,.37);
+        room.add(table);
+        box(1.34,.052,.76,0,.43,0,walnut,table);
+        for (const x of [-.635,.635]) {
+          for (const z of [-.34,.34]) box(.037,.396,.037,x,.227,z,metal,table);
+          box(.038,.034,.69,x,.06,0,metal,table);
+        }
+        for (const z of [-.34,.34]) box(1.28,.034,.038,0,.06,z,metal,table);
+        mesh(new THREE.CylinderGeometry(.1,.06,.055,20),metal,-.23,.484,-.12,table);
+        box(.22,.022,.15,.26,.47,.08,ivory,table);
+        box(.17,.018,.12,.25,.49,.073,upholstery,table);
+        box(.078,.085,.078,.05,.50,-.15,metal,table);
+
+        const lamp = [2.32,0,-1.83];
+        for (const angle of [0,2.094,4.189]) {
+          tube([lamp[0],.83,lamp[2]],[lamp[0]+Math.cos(angle)*.23,.01,lamp[2]+Math.sin(angle)*.23],.015,metal);
+        }
+        tube([lamp[0],.8,lamp[2]],[lamp[0],1.69,lamp[2]],.019,metal);
+        tube([lamp[0],1.69,lamp[2]],[2.1,1.69,lamp[2]],.019,metal);
+        mesh(new THREE.CylinderGeometry(.047,.145,.108,24),metal,2.1,1.62,lamp[2]);
+        mesh(new THREE.CylinderGeometry(.134,.134,.01,24),lampLight,2.1,1.561,lamp[2]);
+        box(.045,.73,.6,3.016,1.65,.25,metal,sofaWall);
+        box(.014,.665,.54,2.989,1.65,.25,ivory,sofaWall);
+        box(.014,.27,.19,2.977,1.82,.165,upholstery,sofaWall).rotation.x = .12;
+        box(.014,.29,.17,2.976,1.53,.31,leather,sofaWall).rotation.x = -.24;
+        box(.014,.29,.14,2.974,1.57,.105,rugLine,sofaWall).rotation.x = -.13;
+
+        const camera = new THREE.OrthographicCamera(-5,5,5,-5,.1,60);
+        const controls = new OrbitControls(camera,canvas);
+        controls.enablePan = false;
+        controls.enableDamping = false;
+        controls.rotateSpeed = .65;
+        controls.minZoom = .65;
+        controls.maxZoom = 2.25;
+        controls.maxPolarAngle = Math.PI*.49;
+        controls.target.set(0,.52,0);
+        controls.addEventListener('change', render);
+        controls.addEventListener('start', () => {
+          for (const button of cameras) button.setAttribute('aria-pressed','false');
+        });
+        const views = {
+          puerta:{ position:[-7.1,5.8,8.3], target:[0,.52,0] },
+          sofa:{ position:[7,4.1,5.8], target:[.16,.47,0] },
+          planta:{ position:[0,12,.002], target:[0,0,0] }
+        };
+        function render() {
+          sofaWall.visible = camera.position.x < 2.55;
+          renderer.render(scene,camera);
+        }
+        function resize() {
+          const { width,height } = mount.getBoundingClientRect();
+          if (!width || !height) return;
+          const aspect = width/height;
+          const halfHeight = Math.max(3.8,4.38/aspect);
+          camera.left = -halfHeight*aspect;
+          camera.right = halfHeight*aspect;
+          camera.top = halfHeight;
+          camera.bottom = -halfHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(width,height,false);
+          render();
+        }
+        function setView(name) {
+          const view = views[name];
+          controls.target.set(...view.target);
+          camera.position.set(...view.position);
+          camera.zoom = 1;
+          camera.updateProjectionMatrix();
+          controls.update();
+          for (const button of cameras) button.setAttribute('aria-pressed', String(button.dataset.camera===name));
+          render();
+        }
+        for (const button of cameras) {
+          button.disabled = false;
+          button.addEventListener('click', () => setView(button.dataset.camera));
+        }
+        setView('puerta');
+        resize();
+        if (shaderFailed) throw new Error('WebGL no pudo dibujar la maqueta.');
+        new ResizeObserver(resize).observe(mount);
+        mount.dataset.ready = 'true';
+        canvas.addEventListener('webglcontextlost', event => {
+          event.preventDefault();
+          showModelFallback('La maqueta 3D se interrumpió. Recargá la página para volver a girarla.');
+        }, {once:true});
+      } catch {
+        showModelFallback('La vista interactiva no está disponible en este navegador. Podés consultar el esquema y el plano.');
+      }
+    }
+    if ('IntersectionObserver' in window) {
+      const lazyModel = new IntersectionObserver(entries => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        lazyModel.disconnect();
+        startModel();
+      }, {rootMargin:'480px'});
+      lazyModel.observe(mount);
+    } else {
+      startModel();
+    }
+  </script>
+</body>
+</html>
