@@ -1,0 +1,6 @@
+.taste-skill/
+shots/
+node_modules/
+.env
+.env.*
+*.pem
